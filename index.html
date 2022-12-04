@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head>
+    <script src="p5.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+<script src="./p5.play.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <script>
+        var user_name = localStorage.getItem("userName");
+        if(user_name==null) user_name = "";
+        </script>
+
+  </head>
+  <body class="offline" onload="getUserName()">
+    <div class="controlsec"><button class="btn" id="user" style="height: 0; width:0; background-color: transparent;border-color: transparent;">name</button> 
+    <header id="main-frame-error" class="interstitial-wrapper"></header>
+    <div class="sec">
+    </body>
+      <script src="sketch.js"></script>
+  <script>
+    var userN = document.getElementById("user");
+
+      function getUserName(){userN.innerText=user_name;if(user_name=="")userN.innerText="name not set";}
+      function setUserName(){
+      var e_name = "";
+      e_name=prompt("Enter name",user_name);
+      if(!e_name==''||!e_name==null){
+      user_name=e_name;
+      userN.innerText=user_name;
+      localStorage.setItem("userName", user_name);
+      document.getElementById("user").blur();
+      document.getElementById("main-frame-error").focus();
+      }
+      }
+    </script>
+</body></html>

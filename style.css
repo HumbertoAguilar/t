@@ -1,0 +1,25 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+button {
+  color:white ;
+  background:#fffefa;
+  border-width: 2px;
+  border-Color:rgb(1,0,0);
+
+  padding: 5px;
+  font-weight: bold;
+  font-size: 2em;
+  font-family: 'Courrier New';
+  margin: 5px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 20px;
+  width: 350px;
+  height: 370px;
+  
+}
